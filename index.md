@@ -1,4 +1,8 @@
-# 👋 Hey, I’m Daniel Jung
+---
+layout: default
+title: Home
+description: Brain dumps, bots, and bold ideas — a nerd's playground for AI, quant finance, and code experiments.
+---
 
 Welcome to my digital lab — a personal site where I explore:
 
