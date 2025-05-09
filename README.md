@@ -15,7 +15,7 @@ This website is hosted via **GitHub Pages** and built to showcase:
 ## 🚀 Live Site
 
 You can view the live site here:  
-👉 [yourusername.github.io](https://yourusername.github.io)
+👉 [danjung1.github.io]([https://yourusername.github.io](https://danjung1.github.io/dan-jung/))
 
 ## 🛠️ Tech Stack
 
