@@ -31,35 +31,43 @@
             to { opacity: 1; transform: translateY(0); }
         }
         .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
         }
         .glass-effect {
             backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         .project-card {
             transition: all 0.3s ease;
         }
         .project-card:hover {
             transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
         html {
             scroll-behavior: smooth;
         }
+        .skill-card {
+            transition: all 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
-<body class="bg-gray-50 font-sans">
+<body class="bg-white font-sans">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
         <div class="max-w-6xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <div class="text-xl font-bold text-gray-800">Daniel Jung</div>
+                <div class="text-xl font-bold text-gray-900">Daniel Jung</div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-600 hover:text-blue-600 transition-colors">Home</a>
-                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
-                    <a href="#projects" class="text-gray-600 hover:text-blue-600 transition-colors">Projects</a>
-                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+                    <a href="#home" class="text-gray-600 hover:text-slate-800 transition-colors font-medium">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-slate-800 transition-colors font-medium">About</a>
+                    <a href="#projects" class="text-gray-600 hover:text-slate-800 transition-colors font-medium">Projects</a>
+                    <a href="#contact" class="text-gray-600 hover:text-slate-800 transition-colors font-medium">Contact</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-600">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -69,10 +77,10 @@
             </div>
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
-                <a href="#home" class="block py-2 text-gray-600 hover:text-blue-600 transition-colors">Home</a>
-                <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600 transition-colors">About</a>
-                <a href="#projects" class="block py-2 text-gray-600 hover:text-blue-600 transition-colors">Projects</a>
-                <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+                <a href="#home" class="block py-2 text-gray-600 hover:text-slate-800 transition-colors font-medium">Home</a>
+                <a href="#about" class="block py-2 text-gray-600 hover:text-slate-800 transition-colors font-medium">About</a>
+                <a href="#projects" class="block py-2 text-gray-600 hover:text-slate-800 transition-colors font-medium">Projects</a>
+                <a href="#contact" class="block py-2 text-gray-600 hover:text-slate-800 transition-colors font-medium">Contact</a>
             </div>
         </div>
     </nav>
@@ -80,16 +88,16 @@
     <!-- Hero Section -->
     <section id="home" class="gradient-bg min-h-screen flex items-center justify-center text-white">
         <div class="text-center animate-fade-in">
-            <div class="w-32 h-32 mx-auto mb-8 rounded-full bg-white/20 glass-effect flex items-center justify-center">
-                <span class="text-4xl font-bold">YN</span>
+            <div class="w-32 h-32 mx-auto mb-8 rounded-full bg-white/10 glass-effect flex items-center justify-center">
+                <span class="text-4xl font-bold text-white">DJ</span>
             </div>
             <h1 class="text-5xl md:text-6xl font-bold mb-4">Daniel Jung</h1>
-            <p class="text-xl md:text-2xl mb-8 text-blue-100">Software Engineer</p>
+            <p class="text-xl md:text-2xl mb-8 text-slate-300 font-light">Software Engineer & Product Builder</p>
             <div class="space-x-4">
-                <a href="#projects" class="inline-block bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors">
+                <a href="#projects" class="inline-block bg-white text-slate-800 px-8 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors">
                     View My Work
                 </a>
-                <a href="#contact" class="inline-block border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                <a href="#contact" class="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-800 transition-colors">
                     Get In Touch
                 </a>
             </div>
@@ -97,18 +105,18 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
+    <section id="about" class="py-20 bg-gray-50">
         <div class="max-w-4xl mx-auto px-6">
             <div class="text-center mb-16 animate-slide-up">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">About Me</h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-slate-800 mx-auto"></div>
             </div>
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="animate-slide-up">
-                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl shadow-2xl"></div>
+                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-slate-600 to-slate-800 rounded-2xl shadow-2xl"></div>
                 </div>
                 <div class="animate-slide-up">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Hello! I'm a passionate developer</h3>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Hello! I'm a passionate developer</h3>
                     <p class="text-gray-600 mb-6 leading-relaxed">
                         I'm a full-stack developer with a passion for algorithmic design and solving complex problems. 
                         I'm very curious about a lot of things and I enjoy turning complex problems into simple, beautiful designs.
@@ -117,12 +125,12 @@
                         When I'm not coding, you can find me playing soccer, chess, piano, and/or enjoying a good cup of coffee while planning my next creative project.
                     </p>
                     <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-gray-50 p-4 rounded-lg">
-                            <div class="text-2xl font-bold text-blue-600">25+</div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                            <div class="text-2xl font-bold text-slate-800">25+</div>
                             <div class="text-gray-600">Projects Completed</div>
                         </div>
-                        <div class="bg-gray-50 p-4 rounded-lg">
-                            <div class="text-2xl font-bold text-blue-600">3+</div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                            <div class="text-2xl font-bold text-slate-800">3+</div>
                             <div class="text-gray-600">Years Experience</div>
                         </div>
                     </div>
@@ -132,48 +140,60 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">Skills & Technologies</h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Skills & Technologies</h2>
+                <div class="w-20 h-1 bg-slate-800 mx-auto"></div>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                <div class="bg-white p-6 rounded-xl shadow-sm text-center hover:shadow-md transition-shadow">
-                    <div class="text-2xl mb-2">⚛️</div>
-                    <div class="font-semibold">React</div>
+                <div class="skill-card bg-gray-50 p-6 rounded-xl text-center border border-gray-100">
+                    <div class="font-semibold text-gray-900">React</div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm text-center hover:shadow-md transition-shadow">
-                    <div class="text-2xl mb-2">📱</div>
-                    <div class="font-semibold">Node.js</div>
+                <div class="skill-card bg-gray-50 p-6 rounded-xl text-center border border-gray-100">
+                    <div class="font-semibold text-gray-900">Node.js</div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm text-center hover:shadow-md transition-shadow">
-                    <div class="text-2xl mb-2">🎨</div>
-                    <div class="font-semibold">CSS/SCSS</div>
+                <div class="skill-card bg-gray-50 p-6 rounded-xl text-center border border-gray-100">
+                    <div class="font-semibold text-gray-900">Python</div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm text-center hover:shadow-md transition-shadow">
-                    <div class="text-2xl mb-2">⚡</div>
-                    <div class="font-semibold">JavaScript</div>
+                <div class="skill-card bg-gray-50 p-6 rounded-xl text-center border border-gray-100">
+                    <div class="font-semibold text-gray-900">JavaScript</div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm text-center hover:shadow-md transition-shadow">
-                    <div class="text-2xl mb-2">🐍</div>
-                    <div class="font-semibold">Python</div>
+                <div class="skill-card bg-gray-50 p-6 rounded-xl text-center border border-gray-100">
+                    <div class="font-semibold text-gray-900">TypeScript</div>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm text-center hover:shadow-md transition-shadow">
-                    <div class="text-2xl mb-2">🗄️</div>
-                    <div class="font-semibold">MongoDB</div>
+                <div class="skill-card bg-gray-50 p-6 rounded-xl text-center border border-gray-100">
+                    <div class="font-semibold text-gray-900">MongoDB</div>
+                </div>
+                <div class="skill-card bg-gray-50 p-6 rounded-xl text-center border border-gray-100">
+                    <div class="font-semibold text-gray-900">C++</div>
+                </div>
+                <div class="skill-card bg-gray-50 p-6 rounded-xl text-center border border-gray-100">
+                    <div class="font-semibold text-gray-900">OCaml</div>
+                </div>
+                <div class="skill-card bg-gray-50 p-6 rounded-xl text-center border border-gray-100">
+                    <div class="font-semibold text-gray-900">Three.js</div>
+                </div>
+                <div class="skill-card bg-gray-50 p-6 rounded-xl text-center border border-gray-100">
+                    <div class="font-semibold text-gray-900">Machine Learning</div>
+                </div>
+                <div class="skill-card bg-gray-50 p-6 rounded-xl text-center border border-gray-100">
+                    <div class="font-semibold text-gray-900">AR/VR</div>
+                </div>
+                <div class="skill-card bg-gray-50 p-6 rounded-xl text-center border border-gray-100">
+                    <div class="font-semibold text-gray-900">AI/LLMs</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-white">
+    <section id="projects" class="py-20 bg-gray-50">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">Featured Projects</h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto">Here are some of my recent projects that showcase my skills in web development, design, and problem-solving.</p>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+                <div class="w-20 h-1 bg-slate-800 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Here are some of my recent projects that showcase my skills in web development, AI, and innovative product design.</p>
             </div>
             
             <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -187,89 +207,110 @@
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-4xl font-bold mb-4">Let's Work Together</h2>
             <div class="w-20 h-1 bg-white mx-auto mb-8"></div>
-            <p class="text-xl text-blue-100 mb-12">Have a project in mind? I'd love to hear about it. Let's chat!</p>
+            <p class="text-xl text-slate-300 mb-12">Have a project in mind? I'd love to hear about it. Let's chat!</p>
             
             <div class="grid md:grid-cols-3 gap-8 mb-12">
                 <div class="glass-effect p-6 rounded-xl">
-                    <div class="text-3xl mb-4">📧</div>
-                    <h3 class="font-semibold mb-2">Email</h3>
-                    <p class="text-blue-100">danjung789@gmail.com</p>
+                    <h3 class="font-semibold mb-2 text-lg">Email</h3>
+                    <p class="text-slate-300">danjung789@gmail.com</p>
                 </div>
                 <div class="glass-effect p-6 rounded-xl">
-                    <div class="text-3xl mb-4">💼</div>
-                    <h3 class="font-semibold mb-2">LinkedIn</h3>
-                    <p class="text-blue-100">linkedin.com/in/danieljung0/</p>
+                    <h3 class="font-semibold mb-2 text-lg">LinkedIn</h3>
+                    <p class="text-slate-300">linkedin.com/in/danieljung0/</p>
                 </div>
                 <div class="glass-effect p-6 rounded-xl">
-                    <div class="text-3xl mb-4">🐙</div>
-                    <h3 class="font-semibold mb-2">GitHub</h3>
-                    <p class="text-blue-100">https://github.com/DanJung1</p>
+                    <h3 class="font-semibold mb-2 text-lg">GitHub</h3>
+                    <p class="text-slate-300">github.com/DanJung1</p>
                 </div>
             </div>
             
-            <a href="mailto:danjung789@gmail.com" class="inline-block bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors">
+            <a href="mailto:danjung789@gmail.com" class="inline-block bg-white text-slate-800 px-8 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors">
                 Send Message
             </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
+    <footer class="bg-slate-900 text-white py-8">
         <div class="max-w-6xl mx-auto px-6 text-center">
             <p>&copy; 2025 Daniel Jung. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Sample projects data - You can easily modify this
+        // Your projects data
         const projects = [
             {
-                title: "E-Commerce Platform",
-                description: "A full-stack e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.",
-                image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
-                technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-                github: "https://github.com/yourusername/ecommerce-platform",
-                demo: "https://your-ecommerce-demo.com"
+                title: "Financial Analysis AI Tool",
+                description: "Automated DCF creation tool with AI-powered financial statement scraping. Provides transparent pricing and accuracy metrics for financial analysts and investors.",
+                technologies: ["Python", "AI/ML", "Financial APIs", "Data Analysis"],
+                category: "FinTech"
             },
             {
-                title: "Task Management App",
-                description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-                image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop",
-                technologies: ["React", "Firebase", "Material-UI"],
-                github: "https://github.com/yourusername/task-manager",
-                demo: "https://your-task-manager.com"
+                title: "AI Learning Study Platform",
+                description: "Comprehensive study tool with NotebookLM functionality, flashcard generation, embedded mathematics calculator, and integration with productivity tools.",
+                technologies: ["React", "AI/ML", "WebGL", "Google APIs"],
+                category: "EdTech"
             },
             {
-                title: "Weather Dashboard",
-                description: "A responsive weather dashboard that provides current weather conditions and forecasts using OpenWeatherMap API with beautiful visualizations.",
-                image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=250&fit=crop",
-                technologies: ["JavaScript", "Chart.js", "OpenWeather API"],
-                github: "https://github.com/yourusername/weather-dashboard",
-                demo: "https://your-weather-app.com"
+                title: "SteadyFit - AI Fitness Tracker",
+                description: "AI-powered image recognition for calorie tracking combined with comprehensive gym workout tracking and powerlifting routine integration.",
+                technologies: ["React Native", "Computer Vision", "AI/ML", "Health APIs"],
+                category: "Health & Fitness"
             },
             {
-                title: "Portfolio Website",
-                description: "A modern, responsive portfolio website built with vanilla JavaScript and CSS. Features smooth animations and optimized performance.",
-                image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=250&fit=crop",
-                technologies: ["HTML", "CSS", "JavaScript"],
-                github: "https://github.com/yourusername/portfolio",
-                demo: "https://yourname.github.io"
+                title: "ClearBreath - Vaping Tracker",
+                description: "Comprehensive vaping tracking and quitting application with behavioral insights, progress tracking, and community support features.",
+                technologies: ["React Native", "Firebase", "Analytics", "Push Notifications"],
+                category: "Health & Wellness"
             },
             {
-                title: "Social Media Dashboard",
-                description: "Analytics dashboard for social media metrics with interactive charts, data visualization, and export functionality.",
-                image: "https://images.unsplash.com/photo-1611605698335-8b1569810432?w=400&h=250&fit=crop",
-                technologies: ["Vue.js", "D3.js", "Express.js"],
-                github: "https://github.com/yourusername/social-dashboard",
-                demo: "https://your-social-dashboard.com"
+                title: "3D Keyboard Simulator",
+                description: "Interactive 3D keyboard builder allowing users to design custom mechanical keyboards with real-world parts and integrated shopping experience.",
+                technologies: ["Three.js", "WebGL", "E-commerce APIs", "3D Modeling"],
+                category: "E-commerce & 3D"
             },
             {
-                title: "Recipe Finder App",
-                description: "A recipe discovery app that helps users find recipes based on available ingredients with nutritional information and cooking instructions.",
-                image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=250&fit=crop",
-                technologies: ["React Native", "Spoonacular API", "Redux"],
-                github: "https://github.com/yourusername/recipe-finder",
-                demo: "https://your-recipe-app.com"
+                title: "DoReMi - Piano Learning App",
+                description: "Visual piano learning platform that converts sheet music into interactive key-pressing animations for accelerated learning.",
+                technologies: ["React", "Web Audio API", "Music Theory", "Animation"],
+                category: "Music Education"
+            },
+            {
+                title: "RecipePlaylist - AI Recipe Generator",
+                description: "AI-powered tool that converts food content from social media platforms into organized recipe cards with playlist functionality.",
+                technologies: ["AI/ML", "Video Processing", "Social APIs", "React"],
+                category: "Food & Social"
+            },
+            {
+                title: "Bibliotheque - Smart Book Tracker",
+                description: "Advanced book tracking application with annotation features, progress summaries, and AI-powered reading insights.",
+                technologies: ["React", "Natural Language Processing", "Cloud Storage", "Analytics"],
+                category: "Productivity"
+            },
+            {
+                title: "Mappd - 3D Map Generator",
+                description: "AI tool that transforms 2D maps into interactive 3D environments with artistic styling and intuitive navigation.",
+                technologies: ["Three.js", "AI/ML", "Mapping APIs", "3D Graphics"],
+                category: "Visualization"
+            },
+            {
+                title: "C++ & OCaml Compilers",
+                description: "Custom compilers built from scratch to deepen understanding of low-level programming languages and compilation processes.",
+                technologies: ["C++", "OCaml", "Compiler Design", "Language Theory"],
+                category: "Systems Programming"
+            },
+            {
+                title: "Local LLM Search Engine",
+                description: "Privacy-focused search engine using local LLM models to provide fast, free AI-powered search without data collection.",
+                technologies: ["Python", "Local LLMs", "Search Algorithms", "Privacy Tech"],
+                category: "AI & Privacy"
+            },
+            {
+                title: "Smart Email Assistant",
+                description: "AI-powered email client with natural language processing for prioritization, auto-responses, and intelligent scheduling.",
+                technologies: ["AI/ML", "Email APIs", "Natural Language Processing", "Calendar Integration"],
+                category: "Productivity"
             }
         ];
 
@@ -279,35 +320,28 @@
             
             projects.forEach((project, index) => {
                 const projectCard = document.createElement('div');
-                projectCard.className = 'project-card bg-white rounded-xl shadow-lg overflow-hidden animate-slide-up';
+                projectCard.className = 'project-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden animate-slide-up';
                 projectCard.style.animationDelay = `${index * 0.1}s`;
                 
                 projectCard.innerHTML = `
-                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 relative overflow-hidden">
-                        <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover opacity-80">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    <div class="h-48 bg-gradient-to-br from-slate-600 to-slate-800 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-xs font-medium uppercase tracking-wider opacity-75 mb-2">${project.category}</div>
+                                <div class="text-2xl font-bold">${project.title.split(' ')[0]}</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">${project.title}</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">${project.description}</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">${project.title}</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed text-sm">${project.description}</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             ${project.technologies.map(tech => `
-                                <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">${tech}</span>
+                                <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs rounded-full font-medium">${tech}</span>
                             `).join('')}
                         </div>
-                        <div class="flex space-x-4">
-                            <a href="${project.github}" target="_blank" class="flex items-center text-gray-600 hover:text-blue-600 transition-colors">
-                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"></path>
-                                </svg>
-                                Code
-                            </a>
-                            <a href="${project.demo}" target="_blank" class="flex items-center text-gray-600 hover:text-blue-600 transition-colors">
-                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                </svg>
-                                Demo
-                            </a>
+                        <div class="text-xs text-slate-500 uppercase tracking-wider font-medium">
+                            ${project.category}
                         </div>
                     </div>
                 `;
