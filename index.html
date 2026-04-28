@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Jung - Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="site">
+        <div class="name">Daniel Jung<!--<span class="cursor"></span>--></div>
+
+        <nav class="nav">
+            <span class="nav-btn active" onclick="show('home',this)">home</span>
+            <span class="nav-btn" onclick="show('thinking',this)">thinking about</span>
+            <span class="nav-btn" onclick="show('working',this)">working on</span>
+        </nav>
+
+        <div class="page active" id="page-home">
+            <div class="rule-line"></div>
+            <p class="bio">
+                Recently I've been thinking about <a href="https://www.ebsco.com/research-starters/language-and-linguistics/linguistic-relativity-sapir-whorf-hypothesis" class="kw-teal">linguistic relativity</a>  and how systems and people communicate with eachother.
+                I've also been thinking a lot about why we find things <a href="https://en.wikipedia.org/wiki/Aesthetics" class="kw-amber">beautiful</a>. 
+
+                <br><br>
+                In my freetime I like to wander around, play chess, and read. I'm always open to book recommendations!
+                <br><br>
+            </p>
+
+            <div class="rule-line"></div>
+
+            <!--
+            <div class="tags">
+                <span class="tag">algorithms</span>
+                <span class="tag">architecture</span>
+                <span class="tag">philosophy</span>
+            </div>
+            -->
+
+            <div class="label">find me</div>
+            <div class="socials">
+                <div class="social-item">
+                    <div class="social-dot" style="background:var(--amber)"></div>
+                    <a href="mailto:daniel@example.com" class="social-link">email</a>
+                </div>
+                <div class="social-item">
+                    <div class="social-dot" style="background:var(--teal)"></div>
+                    <a href="https://linkedin.com/in/danieljung" class="social-link" target="_blank">linkedin</a>
+                </div>
+                <div class="social-item">
+                    <div class="social-dot" style="background:var(--blue)"></div>
+                    <a href="https://github.com/danieljung" class="social-link" target="_blank">github</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="page" id="page-thinking">
+            <ul class="thinking-list">
+                <!-- 
+                <li><span class="lbl">building</span>sentiment engine for financial markets</li>
+                <li><span class="lbl">studying</span>probability, combinatorics, information theory</li>
+                <li><span class="lbl">exploring</span>ML surrogates for complex system modeling</li>
+                <li><span class="lbl">reading</span>mechanism design + market microstructure</li>
+                -->
+
+                <p class="previous thoughts">
+                    When I was younger I really liked reading about bonsai trees, air plants, and rhinoceros beetles.
+                    Perhaps it's because they are all anomalous: bonsai trees are unnaturally small, 
+                    air plants survive without soil, and rhino beetles are known to be abnormally strong by ratio of their body mass. 
+                    
+                    <br><br>I also think it is because I found them all beautiful and worth appreciating. I like learning about things that are weird and beautiful.
+
+                </p>
+
+                <li class="section-gap"><a href="#" target="_blank">The Value-Add of Prediction Markets<span class="arr">↗</span></a></li>
+                <li><a href="#" target="_blank">Étienne-Louis Boullée and Antoni Gaudí<span class="arr">↗</span></a></li>
+                <li><a href="#" target="_blank">LLMs and new knowledge<span class="arr">↗</span></a></li>
+            </ul>
+        </div>
+
+        <div class="page" id="page-working">
+            <h3 class="section-current">CURRENT</h3>
+            <ul class="link-list">
+                <li><a href="#" target="_blank"><span class="project-title">chess engine</span><span class="project-desc">Developing a custom engine to explore move-tree search algorithms and evaluation heuristics.<span class="arr">↗</span></span></a></li>
+                <li><a href="#" target="_blank"><span class="project-title">recipe playlist</span><span class="project-desc">NLP-driven food data pipeline with Instacart and Weee! API integrations for automated grocery logistics.<span class="arr">↗</span></span></a></li>
+                <li><a href="#" target="_blank"><span class="project-title">userspace scheduler</span><span class="project-desc">Implementing a M:N threading library in C with custom context switching, stack allocation, and a round-robin scheduler.<span class="arr">↗</span></span></a></li>
+            </ul>
+            <h3 class="section-systems">systems & theory</h3>
+            <ul class="link-list">
+                <li><a href="#" target="_blank"><span class="project-title">Pintos Operating System</span><span class="project-desc">Kernel-level threading, file descriptor duplication, and synchronization primitives implemented in C.<span class="arr">↗</span></span></a></li>
+                <li><a href="#" target="_blank"><span class="project-title">OCaml Compiler</span><span class="project-desc">A modular compiler featuring lexical analysis, parsing, and intermediate representation (IR) generation.<span class="arr">↗</span></span></a></li>
+            </ul>
+            <h3 class="section-products">products & tools</h3>
+            <ul class="link-list">
+                <li><a href="#" target="_blank"><span class="project-title">chromada</span><span class="project-desc">Reimagining communication through an AI-powered, context-aware email and messaging platform.<span class="arr">↗</span></span></a></li>
+                <li><a href="#" target="_blank"><span class="project-title">trip planner</span><span class="project-desc">An AI-assisted travel coordinator featuring smart budget tracking and itinerary optimization.<span class="arr">↗</span></span></a></li>
+                <li><a href="#" target="_blank"><span class="project-title">bibliotheque</span><span class="project-desc">A social reading platform designed for curation, discovery, and community-driven book tracking.<span class="arr">↗</span></span></a></li>
+                <li><a href="#" target="_blank"><span class="project-title">simple berkeley</span><span class="project-desc">Hyperlocal social backend using Node.js and Firebase with end-to-end encryption and OAuth 2.0.<span class="arr">↗</span></span></a></li>
+                <li><a href="#" target="_blank"><span class="project-title">zenith / workflow</span><span class="project-desc">Custom-built productivity and ticketing systems focused on personal optimization and structured workflows.<span class="arr">↗</span></span></a></li>
+            </ul>
+            <h3 class="section-other">other</h3>
+            <ul class="link-list">
+                <li><a href="#" target="_blank"><span class="project-title">CircuitAI</span><span class="project-desc">An NLP and vision-based pipeline translating schematics and natural language into synthesizable Verilog code.<span class="arr">↗</span></span></a></li>
+                <li><a href="#" target="_blank"><span class="project-title">sentiment engine</span><span class="project-desc">Real-time analysis of market narrative shifts using transformer-based models and market microstructure theory.<span class="arr">↗</span></span></a></li>
+                <li><a href="#" target="_blank"><span class="project-title">battlemates</span><span class="project-desc">A 3D battle simulator built in Three.js featuring independent agents with emergent movement and attack behaviors.<span class="arr">↗</span></span></a></li>
+                <li><a href="#" target="_blank"><span class="project-title">Neural Radiance Fields (NeRF)</span><span class="project-desc">3D scene reconstruction from multi-view images using PyTorch and positional encoding.<span class="arr">↗</span></span></a></li>
+                <li><a href="#" target="_blank"><span class="project-title">computational photography</span><span class="project-desc">A collection of vision projects exploring Laplacian stacks, multi-resolution blending, and automated RGB alignment.<span class="arr">↗</span></span></a></li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <span>daniel jung 2026</span>
+            <div class="footer-dots">
+                <div class="fdot" style="background:var(--amber)"></div>
+                <div class="fdot" style="background:var(--coral)"></div>
+                <div class="fdot" style="background:var(--teal)"></div>
+                <div class="fdot" style="background:var(--blue)"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
